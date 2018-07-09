@@ -1,0 +1,436 @@
+/*
+Author: Tibault Gribaumont
+Version: 1.1
+Last update: 7th May 2018
+Initial scale: Small laptops => 1024px - 1224px
+*/
+
+
+/*
+Table of Contents
+
+1.0 Reset
+2.0 Elements
+    2.1 General
+3.0 Header
+    3.1 General
+4.0 Content
+    4.1 Index
+    4.2 Menu
+5.0 Footer
+6.0 Responsive
+    6.1 Smartphones (portrait and landscape) => 320px - 48Opx
+    6.2 Smartphones (landscape) => 48O+ px
+    6.3 Smartphones (landscape)
+    6.3 iPads (portrait) => 768px - 1024px & portrait
+    6.4 iPads (landscape) => 768px - 1024px & landscape
+    6.5 Smaller laptops => 780- px
+    6.6 Smaller laptops => 1024- px
+    6.7 Desktops and laptops => 1224+ px
+    6.8 Large screens => 1824+ px
+*/
+
+
+/*
+
+*  1.0 Reset
+
+*  http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    /* quotes: none; */
+    /* quotes: initial; */
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+
+*  2.0 Elements
+
+*/
+
+
+/* 2.1 General */
+
+html {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    color: #333;
+}
+
+body {
+    background: -webkit-linear-gradient(90deg, rgb(127, 187, 240), rgb(9, 97, 185));
+    background: linear-gradient(90deg, rgb(127, 187, 240), rgb(9, 97, 185));
+    max-width: 90%;
+    margin: 0 auto;
+    background: url('../images/cover-html-css.jpg') fixed center center no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+blockquote,
+q {
+    font-size: 1.6em;
+    background-color: #a3a3a3;
+    font-style: italic;
+    border: 3px solid #874839;
+    padding: 30px;
+}
+
+blockquote {
+    width: 50%;
+    margin: 80px auto;
+    clear: both;
+    /* display: inline-block; */
+}
+
+q {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+p {
+    line-height: 1.3em;
+}
+
+
+/*
+
+*  3.0 Header
+
+*/
+
+
+/* 3.1 General */
+
+#mainHeader h1,
+#mainHeader h2 {
+    text-align: center;
+}
+
+#mainHeader h2 {
+    background-color: yellow;
+}
+
+
+/*
+
+*  4.0 Content
+
+*/
+
+#mainContent {
+    margin-top: 20px;
+}
+
+#mainContent p:first-child {
+    font-weight: 700;
+}
+
+#mainContent .banner {
+    width: 80%;
+    margin: 20px 10%;
+}
+
+#mainContent img {
+    clear: both;
+    float: left;
+    margin: 0 20px 80px 0;
+    width: 40%;
+}
+
+#mainContent p.clearfix {
+    /* line-height: 1.3em; */
+    padding-top: 30px;
+}
+
+.good,
+.bad {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 700;
+}
+
+.good {
+    color: green;
+}
+
+.bad {
+    color: red;
+}
+
+.villagersQuote {
+    border-left-color: cyan;
+}
+
+.farmersQuote {
+    border-left-color: fuchsia;
+}
+
+#typesPeople li {
+    display: block;
+    width: fit-content;
+}
+
+#typesPeople li:first-child,
+#typesPeople li:nth-child(2),
+#typesPeople li:nth-child(3),
+#typesPeople li:nth-child(4) {
+    padding-right: 60px;
+    line-height: 4em;
+}
+
+#typesPeople li:first-child {
+    background: url('../images/good.png') right center no-repeat;
+}
+
+#typesPeople li:nth-child(2) {
+    background: url('../images/bad.png') right center no-repeat;
+}
+
+#typesPeople li:nth-child(3) {
+    background: url('../images/cat.png') right center no-repeat;
+}
+
+table {
+    margin: 20px auto;
+    border: 2px solid #333;
+}
+
+table tr:nth-child(odd) {
+    background-color: #a3a3a3;
+}
+
+table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+table th,
+table td {
+    padding: 15px 50px;
+}
+
+table caption {
+    /* display: inline-block; */
+    margin-top: 10px;
+    caption-side: bottom;
+}
+
+#notification {
+    text-align: center;
+}
+
+#notification p {
+    background-color: orange;
+    border: 2px solid #000;
+    font-weight: 700;
+    font-family: 'Oswald';
+    padding: 15px 30px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#conclusion {
+    padding-top: 0;
+}
+
+
+/*
+
+*  5.0 Footer
+
+*/
+
+#mainFooter {
+    /* background-color: #4474a3; */
+    /*height: 50px;*/
+    /* color: #f2f9ff; */
+    text-align: center;
+}
+
+#mainFooter #copyright {
+    /*display: block;*/
+    line-height: 50px;
+}
+
+#mainFooter a {
+    color: cyan;
+}
+
+#mainFooter a:visited {
+    color: indigo;
+}
+
+#mainFooter a:hover {
+    color: fuchsia;
+}
